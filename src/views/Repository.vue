@@ -69,6 +69,9 @@ export default {
       }
     }
   },
+  beforeCreate () {
+    this.$store.commit('SET_REPO_README', null)
+  },
   beforeMount () {
     this.info.username = this.$route.params.username
     this.info.repo = this.$route.params.repo
