@@ -7,6 +7,7 @@ vue-github is a open source project built with Vue.js and Github API.
 ## Basic Features
 - Search by username in github
 - See user profile page and its repositories
+- See repositories with README and contributors
 - See followers and following
 
 ## Tools used
@@ -16,6 +17,7 @@ vue-github is a open source project built with Vue.js and Github API.
 - axios
 - element-ui
 - vue-material-design-icons
+- marked
 
 ## Project setup
 ```

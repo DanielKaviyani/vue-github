@@ -45,27 +45,29 @@
           <el-card class="box-card">
             <el-row :gutter="20">
               <el-col :span="12" v-for="repo in userRepos" :key="repo.id" style="margin: 10px 0 10px 0;">
-                <el-card class="box-card">
-                  <h4 style="margin:0;">
-                    {{repo.name}}
-                  </h4>
-                  <p>
-                    {{repo.description}}
-                  </p>
-                  <el-row>
-                    <el-button type="primary" plain style="padding: 6px 8px 8px 8px;">
-                      <star-outline />
-                      {{repo.stargazers_count}}
-                    </el-button>
-                    <el-button type="primary" plain style="padding: 6px 8px 8px 8px;">
-                      <source-fork />
-                      {{repo.forks_count}}
-                    </el-button>
-                    <el-button type="warning" plain style="padding: 6px 8px 8px 8px; float: right;">
-                      {{repo.language}}
-                    </el-button>
-                  </el-row>
-                </el-card>
+                <router-link class="no-decoration" :to="'/user/' + username + '/' + repo.name">
+                  <el-card class="box-card transform-card">
+                    <h4 style="margin:0;">
+                      {{repo.name}}
+                    </h4>
+                    <p>
+                      {{repo.description}}
+                    </p>
+                    <el-row>
+                      <el-button type="primary" plain style="padding: 6px 8px 8px 8px;">
+                        <star-outline />
+                        {{repo.stargazers_count}}
+                      </el-button>
+                      <el-button type="primary" plain style="padding: 6px 8px 8px 8px;">
+                        <source-fork />
+                        {{repo.forks_count}}
+                      </el-button>
+                      <el-button type="warning" plain style="padding: 6px 8px 8px 8px; float: right;">
+                        {{repo.language}}
+                      </el-button>
+                    </el-row>
+                  </el-card>
+                </router-link>
               </el-col>
             </el-row>
           </el-card>

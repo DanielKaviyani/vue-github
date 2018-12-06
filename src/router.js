@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import User from './views/User.vue'
 import Followers from './views/Followers.vue'
 import Following from './views/Following.vue'
+import Repository from './views/Repository.vue'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/user/:username/following',
       name: 'following',
       component: Following
+    },
+    {
+      path: '/user/:username/:repo',
+      name: 'repository',
+      component: Repository
     }
   ]
 })

@@ -67,4 +67,7 @@ body {
   text-decoration: none !important;
   color: inherit !important;
 }
+.transform-card:hover {
+  transform: scale(1.08);
+}
 </style>

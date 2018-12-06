@@ -13,7 +13,7 @@
       <el-row :gutter="20" style="margin-top: 50px;">
         <el-col v-for="user in searchResult.items" :key="user.id" :xs="12" :sm="8" :md="4" :lg="4" :xl="4">
           <router-link :to="'/user/' + user.login" class="no-decoration">
-            <el-card class="username-card" :body-style="{ padding: '0px' }">
+            <el-card class="transform-card" :body-style="{ padding: '0px' }">
               <img :src="user.avatar_url" class="image">
               <div style="padding: 14px; text-align: center;">
                 <span>{{user.login}}</span>
@@ -52,8 +52,5 @@ export default {
     width: 100%;
     height: auto;
     display: block;
-  }
-  .username-card:hover {
-    transform: scale(1.1);
   }
 </style>
