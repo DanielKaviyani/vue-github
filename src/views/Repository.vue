@@ -1,6 +1,6 @@
 <template>
   <div>
-    <template v-if="repoDetail && repoReadme && repoContributors">
+    <template v-if="repoDetail && repoContributors">
       <el-card class="box-card">
         <el-row>
           <h2 style="margin: 0; display: inline;">
@@ -30,7 +30,7 @@
         <p style="background-color: #263238; color: #ECEFF1; padding: 10px; border-radius: 5px; display: inline-block; margin: 5px 0;">
           {{repoDetail.ssh_url}}
         </p>
-        <div style="border-style: solid; border-radius: 3px; border-width: 2px; padding: 0 20px; margin-top: 30px; border-color: #CFD8DC;" v-html="toMarkdown(repoReadme)"></div>
+        <div v-if="repoReadme" style="border-style: solid; border-radius: 3px; border-width: 2px; padding: 0 20px; margin-top: 30px; border-color: #CFD8DC;" v-html="toMarkdown(repoReadme)"></div>
       </el-card>
       <el-card class="box-card" style="margin-top: 30px;">
         <h4 style="margin: 0 0 10px 0;">
